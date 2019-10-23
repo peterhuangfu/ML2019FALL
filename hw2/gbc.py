@@ -42,7 +42,7 @@ if __name__ == '__main__':
 
     # initialize model and test and output result
 
-    gbc_best = gbc(n_estimators=350, learning_rate=0.15, random_state=112).fit(x_train, y_train)
+    gbc_best = gbc(n_estimators=355, learning_rate=0.165, random_state=112).fit(x_train, y_train)
     y_predict = gbc_best.predict(x_test)
 
     with open(str(sys.argv[6]), 'w', newline='') as csvfile:
