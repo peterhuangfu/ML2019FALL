@@ -41,28 +41,11 @@ if __name__ == '__main__':
     X_train = np.array(X_train)
     Y_train = np.array(Y_train)
     X_test = np.array(X_test)
-
-    # standardize data
-
-    num_index = [0, 1, 3, 4, 5]
-    num_mu = np.zeros(X_train.shape[1])
-    num_std = np.ones(X_train.shape[1])
-
-    x_all = np.concatenate((X_train, X_test), axis=0)
-    mu = np.mean(x_all, axis=0)
-    std = np.std(x_all, axis=0)
-
-    num_mu[num_index] = mu[num_index]
-    num_std[num_index] = std[num_index]
-
-    x_all_normal = (x_all - num_mu) / num_std
-    x_train = x_all_normal[:X_train.shape[0]]
-    x_test = x_all_normal[X_train.shape[0]:]
             
     # feature selection
 
-    x_train = enhance(x_train)
-    x_test = enhance(x_test)
+    x_train = enhance(X_train)
+    x_test = enhance(X_test)
 
     y_train = Y_train.reshape(-1, )
 
