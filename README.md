@@ -5,7 +5,7 @@ It's the place to save homeworks about 2019 Machine Learning(exclusive of final 
 * 手刻 Linear Regression & Gradient Descent
 
 ## Homework 2
-* 手刻 Generative model and Logistic model
+* 手刻 Generative model and Logistic Regression
 * 使用 Gradient Boosting Classifier 做分類
 
 ## Homework 3
